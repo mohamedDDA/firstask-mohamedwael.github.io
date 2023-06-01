@@ -1,0 +1,485 @@
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color: var(--dark-text);
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: var(--dark-text);
+  font-size: 2rem;
+}
+
+h3 {
+  color: var(--dark-text);
+  font-size: 1.5rem;
+}
+
+h4 {
+  color: var(--dark-text);
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  color: var(--text);
+  font-size: 20px;
+}
+
+a {
+  color: var(--text);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+li {
+  color: var(--text);
+  font-size: 1rem;
+  list-style: none;
+}
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+}
+
+
+:root {
+  --background: #fff;
+  --text: #a1a1a1;
+  --dark-text: #757575;
+  --hover-bg: #eee;
+  --purble: #7e3584;
+  --orange: #ffc107;
+  --green: #4caf50;
+  --pink: #e91e8e;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 60px;
+}
+
+/* Start Header */
+main {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  background-image: url("../images/blue_bg.png");
+  background-size: 100% 900px;
+  background-repeat: no-repeat;
+}
+
+main .logo {
+  width: 74px;
+}
+
+main .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+main header {
+  display: flex;
+  align-items: center;
+}
+
+main header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+  padding-top: 80px;
+}
+
+main header nav {
+  margin: 0 auto 0 80px;
+}
+
+main header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+main header nav ul li a {
+  font-size: 20px;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+main header nav ul li {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+header nav ul li::before {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: -100%;
+  width: 80%;
+  height: 3px;
+  background-color: var(--purble);
+  transition: 0.3s;
+}
+
+header nav ul li:hover::before {
+  left: 0;
+}
+
+header nav ul li:hover a {
+  color: var(--dark-text);
+}
+
+main header nav ul li.active a {
+  color: var(--dark-text);
+}
+
+main header nav ul li.active::before {
+  left: 0;
+}
+
+main header button {
+  border: none;
+  background-color: var(--background);
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 25px;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+main header button:hover {
+  transition: 0.3s;
+  border: 1px solid var(--dark-text);
+  color: var(--dark-text);
+}
+
+
+
+/* End Header */
+
+/* Stard Landing */
+
+.landing {
+  height: 100%;
+  position: relative;
+}
+
+.landing .container{
+  margin: auto ;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing .text {
+  width: 50%;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  margin-bottom: 7%;
+}
+
+
+.landing h2 {
+  width: 100%;
+  font-size: 64px;
+  font-weight: 500;
+  color: var(--dark-text);
+}
+
+.landing h2 span {
+  color: var(--purble);
+}
+
+.landing  p {
+  width: 100%;
+  margin-top: 10px;
+  font-size :28px;
+  color: var(--text);
+}
+
+.landing .images {
+  margin-bottom: 60px;
+  position: relative;
+  width: 60%;
+  height: 700px;
+  background-image: url("../images/landing_bg.png");
+  background-size:85% 650px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.landing .images::before {
+  content: '';
+  width: 60%;
+  height: 400px;
+  position: absolute;
+  bottom: -150px;
+  left: 30%;
+  transform: translateX(-50%,-50%);
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
+  background-image: url("../images/clouds.png");
+  z-index: 2;
+}
+
+.landing .images img {
+  position: absolute;
+  left: 60%;
+  top: 30%;
+  transform: translate(-50%,-50%);
+  max-width: 100%;
+}
+
+
+main::after {
+  position: absolute;
+  content: " ";
+  width: 90%;
+  height: 250px;
+  background-image: url("../images/waves.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  bottom: -60px;
+  right: 20%;
+  z-index: 44;
+}
+
+/* ENd Landing */
+
+/* Start first section */
+#first .container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+#first .container .bg-image {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#first .container .bg-image div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+#first .container .bg-image .img1 {
+  top: 90px;
+  left: -120px;
+}
+
+
+#first .container .bg-image .img2 {
+  top:50%;
+  left: 50%;
+  transform: translate(-28%,-21%);
+  width: 200px;
+}
+
+#first .container .bg-image .img2 img {
+  width: 100%;
+}
+#first .container .bg-image .img3 {
+  right:-50px;
+}
+
+#first .container .bg-image .img4 {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  transform: translateY(-15%);
+  left: -180px;
+  width: 400px;
+}
+
+#first .container .bg-image .img4 img {
+  object-fit: contain;
+}
+
+
+#first .container .bg-image .img4 .text {
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: left;
+}
+#first .container .bg-image .img4 .text p {
+  color: white;
+  font-size: 26px;
+}
+#first .container .bg-image .img4 .text h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  margin: 0;
+}
+
+
+#first .container .bg-image div img {
+  width: 100%;
+  height: 100%;
+}
+
+#first .container p {
+  font-size: 20px;
+  width: 100%;
+}
+/* End first section */
+
+/* Start Second Section */
+
+#second .container {
+  margin-top: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#second .container .mid {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#second .container .mid h3 {
+  margin-bottom: 20px;
+}
+
+#second .container .mid .icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 105px);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#second .container .mid .icons i {
+  color: var(--text);
+}
+
+footer {
+  padding: 0;
+}
+
+footer  {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  width:110% ;
+  background-image: url("../images/Group\ 1131.png");
+  background-position: -50px 50px;
+  background-repeat: no-repeat;
+  background-size: 100% 760px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+
+footer .container {
+  justify-content: flex-end;
+  margin-bottom: 40px;
+  margin-top: auto;
+}
+
+footer .cards {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+footer .social {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+footer .social .media {
+  display: flex;
+  gap: 20px;
+}
+
+footer .social .media img {
+  object-fit: contain;
+}
+
+footer .cards > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 12px;
+}
+
+footer .container .image {
+  position: absolute;
+  width: 850px;
+  right: 250px;
+  bottom: 0;
+}
+
+footer nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+footer nav ul li  a{
+  color: white;
+  font-weight: bold;
+}
+
+footer .container .image img {
+  width: 100%;
+}
+
+footer .cards > div p {
+  font-size: 14px;
+}
+
+footer .cards > div h4 {
+  font-size: 12px;
+}
+
+/* End Second Section */
